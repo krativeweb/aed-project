@@ -11,7 +11,7 @@ import { Label } from "../../components/ui/label"
 import { Textarea } from "../../components/ui/textarea"
 import { Checkbox } from "../../components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../components/ui/select"
-import { useToast } from "../../hooks/use-toast"
+// import { useToast } from "../../hooks/use-toast"
 import Header from "../../components/ui/header";
 import Footer from "../../components/ui/footer";
 import { useFormik } from "formik";
@@ -22,7 +22,7 @@ import axios from "axios";
 export default function RegisterAED() {
   const [step, setStep] = useState(1);
   const totalSteps = 5
-  const { toast } = useToast()
+  // const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false);
 const [message, setMessage] = useState(""); // Add this line
 

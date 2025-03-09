@@ -153,7 +153,7 @@ onSubmit: async (values) => {
       }
 
       const response = await axios.post(
-        "http://localhost:5000/register-aed",
+        "https://aed-backend-1.onrender.com/register-aed",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

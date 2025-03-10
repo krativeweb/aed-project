@@ -17,6 +17,11 @@ import Footer from "../../components/ui/footer";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import Head from "next/head";
+
+
+
+
 
 
 export default function RegisterAED() {
@@ -183,13 +188,15 @@ useEffect(() => {
 
 
   return (
+
+    
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
      <Header/>
 
 
       {/* Main Content */}
-      <main className="container mx-auto mt-20 px-4 py-8">
+      <main className="mx-auto mt-20 px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -214,7 +221,7 @@ useEffect(() => {
         <Label htmlFor="locationName">Location Name</Label>
         <Input id="locationName" {...formik.getFieldProps("locationName")} placeholder="Enter location name" />
         {formik.touched.locationName && formik.errors.locationName && (
-          <p className="text-red-500 text-sm">{formik.errors.locationName}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.locationName}</p>
         )}
       </div>
 
@@ -227,7 +234,7 @@ useEffect(() => {
           placeholder="Describe where the AED is placed"
         />
         {formik.touched.aedPlacement && formik.errors.aedPlacement && (
-          <p className="text-red-500 text-sm">{formik.errors.aedPlacement}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.aedPlacement}</p>
         )}
       </div>
 
@@ -240,7 +247,7 @@ useEffect(() => {
           placeholder="Enter street address"
         />
         {formik.touched.streetAddress && formik.errors.streetAddress && (
-          <p className="text-red-500 text-sm">{formik.errors.streetAddress}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.streetAddress}</p>
         )}
       </div>
 
@@ -331,7 +338,7 @@ useEffect(() => {
           placeholder="Enter responsible party name"
         />
         {formik.touched.responsibleParty && formik.errors.responsibleParty && (
-          <p className="text-red-500 text-sm">{formik.errors.responsibleParty}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.responsibleParty}</p>
         )}
       </div>
       
@@ -409,7 +416,7 @@ useEffect(() => {
           placeholder="Enter AED manufacturer"
         />
         {formik.touched.aedManufacturer && formik.errors.aedManufacturer && (
-          <p className="text-red-500 text-sm">{formik.errors.aedManufacturer}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.aedManufacturer}</p>
         )}
       </div>
 
@@ -472,7 +479,7 @@ useEffect(() => {
           onFocus={(e) => e.target.showPicker?.()}
         />
         {formik.touched.aedInstallDate && formik.errors.aedInstallDate && (
-          <p className="text-red-500 text-sm">{formik.errors.aedInstallDate}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.aedInstallDate}</p>
         )}
       </div>
 
@@ -580,7 +587,7 @@ useEffect(() => {
           </div>
         ))}
         {formik.touched.emergencySupplies && formik.errors.emergencySupplies && (
-          <p className="text-red-500 text-sm">{formik.errors.emergencySupplies}</p>
+          <p className="text-red-500 text-sm mt-3">{formik.errors.emergencySupplies}</p>
         )}
       </div>
 
